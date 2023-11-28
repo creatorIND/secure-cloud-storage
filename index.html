@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>E2EE in Cloud Storage</title>
+	</head>
+	<body>
+		<form id="fileForm" enctype="multipart/form-data" action="">
+			<input type="file" name="file" required />
+			<button type="button" onclick="uploadFile()">Upload</button>
+		</form>
+		<hr />
+		<h2>File List</h2>
+		<ul id="fileList"></ul>
+		<script src="client.js"></script>
+	</body>
+</html>
