@@ -1,0 +1,119 @@
+:root {
+	font-family: "Merriweather Sans", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: #aeceff;
+	padding: 20px;
+}
+
+.index {
+	height: 100vh;
+	background: radial-gradient(50% 50% at 50% 50%, #0c0033 31.77%, #000 100%);
+}
+
+.dashboard {
+	min-height: 100vh;
+	background: radial-gradient(
+		116.9% 75.19% at 24.34% 78.42%,
+		#0c0033 26.56%,
+		#000 100%
+	);
+	background-size: cover;
+}
+
+.intro {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.btn {
+	max-width: fit-content;
+	text-decoration: none;
+	background-color: transparent;
+	color: #aeceff;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 10px 25px;
+	border-radius: 15px;
+	border: 2px solid #aeceff;
+	cursor: pointer;
+}
+
+.btn-download {
+	border-radius: 0;
+	padding: 5px 15px;
+	font-size: 14px;
+	font-weight: 300;
+	border: 1px solid #aeceff;
+}
+
+.btn:hover {
+	background: rgba(0, 74, 186, 0.4);
+}
+
+h2 {
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+
+.line-break {
+	height: 3px;
+	background: rgba(174, 206, 255, 0.4);
+	border: none;
+}
+
+.dashboard-section {
+	padding: 50px;
+}
+
+input[type="file"]::file-selector-button {
+	font-family: "Merriweather Sans";
+	font-size: 18px;
+	font-weight: 300;
+	background-color: transparent;
+	padding: 8px 24px;
+	border: 1px solid #aeceff;
+	margin-right: 20px;
+	color: #aeceff;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+	background-color: #aeceff;
+	color: #0c0033;
+}
+
+#fileForm {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+#fileList {
+	list-style: none;
+}
+
+.file-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50%;
+	padding: 0 30px;
+	padding-bottom: 20px;
+	border-bottom: 3px solid rgba(67, 148, 213, 0.7);
+	margin-bottom: 40px;
+}
