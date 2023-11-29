@@ -24,6 +24,10 @@ app.get("/", (req, res) => {
 	res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/dashboard", (req, res) => {
+	res.sendFile(__dirname + "/dashboard.html");
+});
+
 // Handle file uploads
 app.post("/upload", upload.single("file"), (req, res) => {
 	const uploadFile = req.file;
