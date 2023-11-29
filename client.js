@@ -1,5 +1,4 @@
 async function uploadFile() {
-	console.log("fn called");
 	const fileInput = document.querySelector("input[type='file']");
 	const fileList = document.querySelector("#fileList");
 
@@ -19,15 +18,28 @@ async function uploadFile() {
 	alert(result);
 
 	if (fileList) {
+		let fileName = file.name;
+
 		const listItem = document.createElement("li");
-		listItem.textContent = file.name;
+		listItem.classList.add("file-item");
+
+		const fileText = document.createElement("span");
+		if (fileName.length > 20) {
+			fileName = fileName.substring(0, 20);
+			fileText.textContent = fileName + "...";
+		} else {
+			fileText.textContent = fileName;
+		}
+		console.log(file.name);
 
 		// Add a link to view decrypted content
 		const link = document.createElement("a");
 		link.href = `download/${file.name}`;
-		link.textContent = "(Download Decrypted Content)";
+		link.textContent = "Download Decrypted Content";
 		link.download = file.name;
+		link.classList.add("btn", "btn-download");
 
+		listItem.appendChild(fileText);
 		listItem.appendChild(link);
 		fileList.appendChild(listItem);
 	}
